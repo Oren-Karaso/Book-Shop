@@ -72,7 +72,7 @@ function onSetSort(sortBy) {
 
 function onRead(bookId) {
     var currBook = getBookById(bookId);
-    gCurrBook = currBook;
+    currBook;  
     
     var elModal = document.querySelector('.modal');
     elModal.style.visibility = 'visible';
@@ -81,7 +81,7 @@ function onRead(bookId) {
     var elModalHtml = document.querySelector('.modal');
 
     elModalHtml.innerHTML = ` <h2 data-trans="modal-details" >Book Details</h2>
-    <h3 ><span data-trans="modal-name">Name:</span> <span class="span1">${gCurrBook.bookName}</span></h3><br>
+    <h3 ><span data-trans="modal-name">Name:</span> <span class="span1">${currBook.bookName}</span></h3><br>
      <h3><span data-trans="modal-price">Price:</span><span class="span2">${formatCurrency(currBook.price)}</span></h3><br>
     <h4><span data-trans="modal-rtng">Ratings (out of 5):</span><span span class="span3">${ratingStars(ratings)}</span></h4>
     <div class="about">
