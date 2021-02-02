@@ -15,6 +15,10 @@ body.rtl {
 direction: rtl;
 }
 
+.lang-select {
+    margin-bottom: 10px;
+}
+
 .main-container {
     width: 530px;
     position: relative;
@@ -101,7 +105,7 @@ table, tr, td, th {
 .modal {
     font-family: cursive;
     position: absolute;
-    top: 3px;
+    top: -60px;
     outline: 3px solid black;
     visibility: hidden;
     background-color: rgba(209, 214, 141, 0.856);
