@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books are great</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body onload="init()">
+    <header>
+        <select onchange="onSetLang(this.value)">
+            <option value="en">English</option>
+            <option value="he">עברית</option>
+        </select>
+    </header>
+    <section class="main-container">
+        <div class="add-book">
+            <form onsubmit="onAddBook(event)" class="add-form">
+                <input type="text" data-trans="title" placeholder="Name" name="book-name">
+                <input type="text" data-trans="price" placeholder="Price" name="book-price">
+                <button onclick="" data-trans="add-book" class="new-book">Add Book</button>
+            </form>
+        </div>
+        <div class="books-table">
+            <table border="0">
+                <thead>
+                    <tr class="first-row">
+                        <th class="id"> Id </th>
+                        <th data-trans="title" class="title" onclick="onSetSort('title')" title="Sort"> Title </th>
+                        <th data-trans="price" class="price" onclick="onSetSort('price')" title="Sort"> Price </th>
+                        <th data-trans="actions" class="actions" colspan="3"> Actions </th>
+                    </tr>
+                </thead>
+                <tbody> </tbody>
+            </table>
+        </div>
+        <div class="prev-nxt">
+            <button data-trans="prev-page" onclick="onPreviousPage()">Previous Page</button>
+            <button data-trans="nxt-page" onclick="onNextPage()">Next Page</button>
+        </div>
+        <div class="modal">
+           
+        </div>
+
+
+    </section>
+    <script src="js/util-services.js"></script>
+    <script src="js/i18n-service.js"></script>
+    <script src="js/storage-services.js"></script>
+    <script src="js/books-services.js"></script>
+    <script src="js/books-controller.js"></script>
+</body>
+
+</html>
